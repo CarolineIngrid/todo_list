@@ -1,20 +1,43 @@
+* {
+    margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+   background-color: rgb(208, 95, 237);
+
+}
+
+.menu{
+  height: 40px;
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  text-align: center;
+}
 
 .base{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: rgb(208, 95, 237);
-    justify-content: space-around;
-}
-/* ------------- BOTÃO -------------- */
-.adicionar_tarefa{
-    width: 80px;
-    height: 80px;
-    border-radius: 100px;
-    align-self: center;
+    justify-content: space-between;
+    margin: 0 20px 0 20px
 }
 
+.calendario{
+    margin: 10px;
+    display: flex;
+}
+
+.quadrado{
+    width: 30px;
+    height: 60px;
+    border-radius: 20%;
+    background-color: blue;
+    margin: 10px;
+
+}
 
 
 
@@ -22,3 +45,17 @@ h1{
     color: white;
     align-self: flex-start;
 }
+
+/* ------------- BOTÃO -------------- */
+.adicionar_tarefa{
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    align-self: center;
+    position: sticky;
+    bottom: 40px;
+}
+
+
+
+
