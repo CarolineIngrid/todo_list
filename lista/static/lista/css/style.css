@@ -1,3 +1,24 @@
-body{
-    background-color: aquamarine;
+
+.base{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(208, 95, 237);
+    justify-content: space-around;
+}
+/* ------------- BOTÃO -------------- */
+.adicionar_tarefa{
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    align-self: center;
+}
+
+
+
+
+h1{
+    color: white;
+    align-self: flex-start;
 }
