@@ -8,30 +8,42 @@
     <link rel="stylesheet" href="{% static 'lista/css/style.css' %}" />
     <title>Document</title>
 </head>
-<body>
-    <div class="menu"> <p></p> <p></p> <p></p></div>
-    <div class="base">
-        <div class="calendario">
-            <div class="quadrado"></div>
-            <div class="quadrado"></div>
-            <div class="quadrado"></div>
-            <div class="quadrado"></div>
-            <div class="quadrado"></div>
-            <div class="quadrado"></div>
+    <body>
+        <div class="menu">
+            <div class="menu-p">
+                <p></p> <p></p> <p></p>
+            </div>
         </div>
-        <h1> Tarefas</h1>
-  
-        <div class="teste">
-        <div class="importancia-moderada"> </div>
-        <input type="text" placeholder="adicione suas tarefas aqui">
-        <input type="checkbox" class="check">
+        <div class="base">
+            <div class="calendario">
+                <div class="quadrado"></div>
+                <div class="quadrado"></div>
+                <div class="quadrado"></div>
+                <div class="quadrado"></div>
+                <div class="quadrado"></div>
+                <div class="quadrado"></div>
+            </div>
 
-        </div>
-        <!-- ------- botão adiocnar aqui -------- -->
-        <button class="adicionar_tarefa"> </button>
-        
+            <h1> Tarefas</h1>
 
-    </div>
-   
-</body>
+            {% for tarefa in lista_tarefas %}
+            <div class="teste">
+
+            <div class="importancia-moderada"> </div>
+                <div class="conteudo">
+                <b>{{tarefa.descricao}}</b><p class="data">{{tarefa.criacao}}</p>
+                    <input type="checkbox" class="check">
+<!--                <b>Status:</b> {{tarefa.status}}-->
+                </div>
+                {% endfor %}
+</div>
+
+<!--                <input type="text" placeholder="adicione suas tarefas aqui">-->
+            </div>
+
+            <!-- ------- botão adiocnar aqui -------- -->
+            <button class="adicionar_tarefa"> </button>
+
+
+    </body>
 </html>
