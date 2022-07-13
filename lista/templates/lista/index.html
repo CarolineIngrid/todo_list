@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'lista/css/style.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
     <title> To Do List</title>
 </head>
     <body>
@@ -28,14 +31,14 @@
             
                 <ul class="tarefas">
                     {% if tarefa.categoria == "urgente" %}
-                        <li class="importancia-urgente"> <div class="conteudo"> {{tarefa.descricao}}<p>{{tarefa.criacao}}</p> </div></li>
-                        <input type="checkbox" class="check">
+                        <li class="importancia-urgente"> <div class="conteudo"> <b>{{tarefa.descricao}}</b> <p>{{tarefa.criacao}}</p> </div></li>
+                        <!-- <input type="checkbox" class="check"> -->
                     {% elif tarefa.categoria == "moderada" %}
-                        <li class="importancia-moderada"> <div class="conteudo"> {{tarefa.descricao}} <p>{{tarefa.criacao}}</p> </div></li>
-                        <input type="checkbox" class="check">
+                        <li class="importancia-moderada"> <div class="conteudo"> <b>{{tarefa.descricao}}</b> <p>{{tarefa.criacao}}</p> </div></li>
+                        <!-- <input type="checkbox" class="check"> -->
                     {% else %}
-                        <li class="importancia-afazer"> <div class="conteudo"> {{tarefa.descricao}} <p>{{tarefa.criacao}}</p> </div></li>
-                        <input type="checkbox" class="check" name="status">
+                        <li class="importancia-afazer"> <div class="conteudo"> <b>{{tarefa.descricao}}</b> <p>{{tarefa.criacao}}</p> </div></li>
+                        <!-- <input type="checkbox" class="check" name="status"> -->
                     {% endif %}
 
                             <!-- <form method="get" action="{% url 'eita' %}">
@@ -54,7 +57,7 @@
 
             {% endfor %}
                  <!-- ------- botão adiocnar aqui -------- -->
-            <button class="adicionar_tarefa"> . </button>
+            <button class="adicionar_tarefa"> </button>
        
 
             <!-- <input type="text" placeholder="adicione suas tarefas aqui"> -->

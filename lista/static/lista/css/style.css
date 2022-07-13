@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
@@ -99,14 +100,36 @@ h1{
     align-self: flex-start;
 }
 
+.tarefas li{
+    margin-top: 8%;
+}
+
 /* ------------- BOTÃO -------------- */
 .adicionar_tarefa{
     margin-top: 35%;
     width: 75px;
     height: 75px;
-    border-radius: 100px;
-    border: none;
-    background-color: #CBC0D3
-
-
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 40px;
+    margin-left: 40%;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
 }
+
+/* -------- vai ser usado pra tela grande ------ */
+/* .adicionar_tarefa:hover {
+  background-color: #fff;
+}
+
+.adicionar_tarefa:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+} */
+
+
+
+
