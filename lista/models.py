@@ -6,8 +6,8 @@ class Tarefa(models.Model):
     # transformar em cores
     OPCAO_CATEGORIA = (
         ('urgente', 'Urgente'),
-        ('importante', 'Importante'),
-        ('precisa ser feito', 'Precisa ser feito'),
+        ('moderada', 'Moderada'),
+        ('a fazer', 'A fazer'),
     )
 
 

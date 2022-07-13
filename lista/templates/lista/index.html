@@ -6,18 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'lista/css/style.css' %}" />
-    <title>Document</title>
+    <title> To Do List</title>
 </head>
-<<<<<<< HEAD
-<body>
-=======
     <body>
-        <div class="menu">
-            <div class="menu-p">
-                <p></p> <p></p> <p></p>
-            </div>
->>>>>>> a536aec68fea3a757bb04948d67b7f7f6958f282
+        <div class="menu"> <p></p> <p></p> <p></p>
         </div>
+
         <div class="base">
             <div class="calendario">
                 <div class="quadrado"></div>
@@ -31,23 +25,35 @@
             <h1> Tarefas</h1>
 
             {% for tarefa in lista_tarefas %}
-            <div class="teste">
-
-            <div class="importancia-moderada"> </div>
-                <div class="conteudo">
-                <b>{{tarefa.descricao}}</b><p class="data">{{tarefa.criacao}}</p>
+            
+            <ul class="tarefas">
+                {% if tarefa.categoria == "urgente" %}
+                    <li class="importancia-urgente"> <div class="conteudo"></li>
                     <input type="checkbox" class="check">
-<!--                <b>Status:</b> {{tarefa.status}}-->
-                </div>
+                {% elif tarefa.categoria == "moderada" %}
+                    <li class="importancia-moderada"> <div class="conteudo"></li>
+                    <input type="checkbox" class="check">
+                {% else %}
+                    <li class="importancia-afazer"> <div class="conteudo"></li>
+                    <input type="checkbox" class="check">
+                {% endif %}
+            </ul>
+            
+               
+                
+               <b>{{tarefa.descricao}}</b><p>{{tarefa.criacao}}</p>
+
+               <!-- <b>Status:</b> {{tarefa.status}} -->
+
+            <!-- <button class="adicionar_tarefa"> </button> -->
                 {% endfor %}
-</div>
+       
 
 <!--                <input type="text" placeholder="adicione suas tarefas aqui">-->
-            </div>
 
             <!-- ------- botão adiocnar aqui -------- -->
-            <button class="adicionar_tarefa"> </button>
+           
 
-
+        </div>
     </body>
 </html>

@@ -5,6 +5,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  height: 90vh;
 }
 
 .menu{
@@ -12,7 +13,7 @@ body {
   margin-left: 3%;
 }
 
-.menu-p{
+.menu p{
     height: 2.5px;
     border-radius: 5%;
     background-color: #8E9AAF;
@@ -23,7 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     margin: 0 20px 0 20px
 }
 
@@ -68,15 +69,21 @@ body {
 }
 
 .importancia-moderada{
-    width: 5px;
-    height: 40px;
-    background-color: #FFBE0B;
+    width: 8px;
+    height: 20px;
+    background-color: #ffeb0b;
 }
 
 .importancia-urgente{
-    width: 5px;
-    height: 40px;
+    width: 8px;
+    height: 20px;
     background-color: #ff300b;
+}
+
+.importancia-afazer{
+    width: 8px;
+    height: 20px;
+    background-color: #7dff0b;
 }
 
 li{
