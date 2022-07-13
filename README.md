@@ -8,5 +8,7 @@ Projeto desenvolvido em conjunto com os desenvolvedores Caio e Gabi;
 
 # Decisões e funcionalidades
 - Decidimos que começaremos nosso projeto pelo front-end, usando html e css, dentro do framework Django 🔫🔫
-- Criamos uma base em html, com titulo, menu, lista onde as tarefas serão adicionadas, e uma classe para suas prioridades que serão implementadas junto ao django.
+- Escolhemos como base um template do behance
+- Criamos uma base em html, com titulo, menu, lista onde as tarefas serão adicionadas, e uma classe para suas prioridades que foram implementadas junto ao django.
+
 

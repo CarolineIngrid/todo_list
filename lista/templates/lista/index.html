@@ -26,32 +26,40 @@
 
             {% for tarefa in lista_tarefas %}
             
-            <ul class="tarefas">
-                {% if tarefa.categoria == "urgente" %}
-                    <li class="importancia-urgente"> <div class="conteudo"></li>
-                    <input type="checkbox" class="check">
-                {% elif tarefa.categoria == "moderada" %}
-                    <li class="importancia-moderada"> <div class="conteudo"></li>
-                    <input type="checkbox" class="check">
-                {% else %}
-                    <li class="importancia-afazer"> <div class="conteudo"></li>
-                    <input type="checkbox" class="check">
-                {% endif %}
-            </ul>
-            
+                <ul class="tarefas">
+                    {% if tarefa.categoria == "urgente" %}
+                        <li class="importancia-urgente"> <div class="conteudo"> {{tarefa.descricao}}<p>{{tarefa.criacao}}</p> </div></li>
+                        <input type="checkbox" class="check">
+                    {% elif tarefa.categoria == "moderada" %}
+                        <li class="importancia-moderada"> <div class="conteudo"> {{tarefa.descricao}} <p>{{tarefa.criacao}}</p> </div></li>
+                        <input type="checkbox" class="check">
+                    {% else %}
+                        <li class="importancia-afazer"> <div class="conteudo"> {{tarefa.descricao}} <p>{{tarefa.criacao}}</p> </div></li>
+                        <input type="checkbox" class="check" name="status">
+                    {% endif %}
+
+                            <!-- <form method="get" action="{% url 'eita' %}">
+                                <li class="importancia-urgente"> <div class="conteudo"></li>
+                                <input type="checkbox" class="check" name="status">
+                            </form>
+                        -->
+                </ul>
                
                 
-               <b>{{tarefa.descricao}}</b><p>{{tarefa.criacao}}</p>
+                <!-- <b>{{tarefa.descricao}}</b> -->
+                
+                <!-- <p>{{tarefa.criacao}}</p>
 
-               <!-- <b>Status:</b> {{tarefa.status}} -->
+                <b>Status:</b> {{tarefa.status}} -->
 
-            <!-- <button class="adicionar_tarefa"> </button> -->
-                {% endfor %}
+            {% endfor %}
+                 <!-- ------- botão adiocnar aqui -------- -->
+            <button class="adicionar_tarefa"> . </button>
        
 
-<!--                <input type="text" placeholder="adicione suas tarefas aqui">-->
+            <!-- <input type="text" placeholder="adicione suas tarefas aqui"> -->
 
-            <!-- ------- botão adiocnar aqui -------- -->
+           
            
 
         </div>
