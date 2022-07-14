@@ -17,3 +17,8 @@ class Tarefa(models.Model):
                                  default='importante')
     status = models.BooleanField(default=False)
 
+    def __str__(self):
+        identidade = f'{self.descricao} {self.id}'
+        return identidade
+
+
