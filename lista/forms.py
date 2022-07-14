@@ -6,4 +6,8 @@ from .models import Tarefa
 class ListaForms(forms.ModelForm):
     class Meta:
         model = Tarefa
-        fields = ('descricao', 'categoria', 'status')
+        fields = [
+            "descricao",
+            "categoria",
+            "status",
+        ]

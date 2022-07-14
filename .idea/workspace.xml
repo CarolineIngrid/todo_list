@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="14eafc71-8acc-4f7b-8c62-9671809f9cc7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/lista/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lista/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista/static/lista/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/lista/static/lista/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista/templates/lista/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lista/templates/lista/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/lista/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista/templates/lista/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/lista/templates/lista/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lista/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lista/views.py" afterDir="false" />
     </list>
@@ -34,7 +32,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/gabrielanascimento/workspace/2022/busertech/python/django-pratica/todo_list"
+    "last_opened_file_path": "/home/gabrielanascimento/workspace/2022/busertech/python/django-pratica/django_cursos_aula9"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

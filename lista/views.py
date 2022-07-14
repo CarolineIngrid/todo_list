@@ -1,17 +1,25 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
+from django.views.generic import CreateView
 
-from lista.forms import ListaForms
+from .forms import ListaForms
 from .models import Tarefa
 
 from urllib import request
+
 
 # Create your views here.
 def lista_tarefas(request):
     lista_tarefas = Tarefa.objects.all()
     # status = request.GET.get('status')
     # print(status)
-    return render(request, 'lista/index.html', {'lista_tarefas':lista_tarefas})
+    return render(request, 'lista/index.html', {'lista_tarefas': lista_tarefas})
 
-def lista_new(request):
-    form = ListaForms()
-    return render(request, 'lista/new.html', {'form':form})
+
+class TarefasNew(CreateView):
+    model = Tarefa
+    form_class = ListaForms
+    context_objects_name = "tarefas"
+    template_name = 'lista/new.html'
+
+    def get_success_url(self):
+        return reverse('lista')
