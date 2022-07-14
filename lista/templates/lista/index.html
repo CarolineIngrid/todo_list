@@ -52,7 +52,10 @@
 
             {% endfor %}
                  <!-- ------- botão adiocnar aqui -------- -->
-            <button class="adicionar_tarefa"> </button>
+            <form action="{% url 'lista_new' %}">
+                <button class="adicionar_tarefa"> </button>
+            </form>
+            
        
 
             <!-- <input type="text" placeholder="adicione suas tarefas aqui"> -->
