@@ -32,12 +32,15 @@
                 <ul class="tarefas">
                     {% if tarefa.categoria == "urgente" %}
                         <li class="importancia-urgente"> <div class="conteudo"> <b>{{tarefa.descricao}}</b> <p>{{tarefa.criacao}}</p> </div></li>
+                        <a href="{% url 'lista_delete' tarefa.id %}">Delete</a>
                         <!-- <input type="checkbox" class="check"> -->
                     {% elif tarefa.categoria == "moderada" %}
                         <li class="importancia-moderada"> <div class="conteudo"> <b>{{tarefa.descricao}}</b> <p>{{tarefa.criacao}}</p> </div></li>
+                        <a href="{% url 'lista_delete' tarefa.id %}">Delete</a>
                         <!-- <input type="checkbox" class="check"> -->
                     {% else %}
                         <li class="importancia-afazer"> <div class="conteudo"> <b>{{tarefa.descricao}}</b> <p>{{tarefa.criacao}}</p> </div></li>
+                        <a href="{% url 'lista_delete' tarefa.id %}">Delete</a>
                         <!-- <input type="checkbox" class="check" name="status"> -->
                     {% endif %}
 

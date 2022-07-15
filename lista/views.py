@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render, reverse, redirect
 from django.views.generic import CreateView
 
 from .forms import ListaForms
@@ -23,3 +23,8 @@ class TarefasNew(CreateView):
 
     def get_success_url(self):
         return reverse('lista')
+
+def delete(request, tarefa_id):
+    tarefa = Tarefa.objects.get(id=tarefa_id)
+    tarefa.delete()
+    return redirect('lista')
