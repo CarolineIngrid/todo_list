@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title> To Do List</title>
 </head>
     <body>
@@ -22,7 +23,6 @@
                 <div class="quadrado"></div>
                 <div class="quadrado"></div>
                 <div class="quadrado"></div>
-                <div class="quadrado"></div>
             </div>
 
             <h1> Tarefas</h1>
@@ -31,16 +31,23 @@
             
                 <ul class="tarefas">
                     {% if tarefa.categoria == "urgente" %}
-                        <li class="importancia-urgente"> <div class="conteudo"> <b>{{tarefa.descricao}}</b> <p>{{tarefa.criacao}}</p> </div></li>
-                        <a href="{% url 'lista_delete' tarefa.id %}">Delete</a>
+                        <li class="importancia-urgente"> <div class="conteudo"> <b>{{tarefa.titulo}}</b> <div>{{tarefa.descricao}}</div> {{tarefa.criacao}}</div>  </li>
                         <!-- <input type="checkbox" class="check"> -->
+                        <a class='delete' href="{% url 'lista_delete' tarefa.id %}"><span class="material-symbols-outlined">
+                            delete
+                            </span></a>
                     {% elif tarefa.categoria == "moderada" %}
-                        <li class="importancia-moderada"> <div class="conteudo"> <b>{{tarefa.descricao}}</b> <p>{{tarefa.criacao}}</p> </div></li>
-                        <a href="{% url 'lista_delete' tarefa.id %}">Delete</a>
+                        <li class="importancia-moderada"> <div class="conteudo"> <b>{{tarefa.titulo}}</b>  <div>{{tarefa.descricao}}</div>} {{tarefa.criacao}}</div> </li>
+                        <a class='delete' href="{% url 'lista_delete' tarefa.id %}"><span class="material-symbols-outlined">
+                            delete
+                            </span></a>
+                        
                         <!-- <input type="checkbox" class="check"> -->
                     {% else %}
-                        <li class="importancia-afazer"> <div class="conteudo"> <b>{{tarefa.descricao}}</b> <p>{{tarefa.criacao}}</p> </div></li>
-                        <a href="{% url 'lista_delete' tarefa.id %}">Delete</a>
+                        <li class="importancia-afazer"> <div class="conteudo"> <b>{{tarefa.titulo}}</b> <div>{{tarefa.descricao}}</div> {{tarefa.criacao}} </div> </li>
+                        <a class='delete' href="{% url 'lista_delete' tarefa.id %}"><span class="material-symbols-outlined">
+                            delete
+                            </span></a>
                         <!-- <input type="checkbox" class="check" name="status"> -->
                     {% endif %}
 

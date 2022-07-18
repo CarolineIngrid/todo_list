@@ -10,10 +10,14 @@ class Tarefa(models.Model):
         ('a fazer', 'A fazer'),
     )
 
-
-    descricao = models.CharField(max_length=400)
+    titulo = models.CharField(default='', max_length=24, blank=True)
+    descricao = models.CharField(max_length=300)
     criacao = models.DateTimeField(auto_now_add=True)
-    categoria = models.CharField(max_length=25, choices=OPCAO_CATEGORIA,
-                                 default='importante')
+    categoria = models.CharField(max_length=25, choices=OPCAO_CATEGORIA, default='importante')
     status = models.BooleanField(default=False)
+
+    def __str__(self):
+        identidade = f'{self.descricao} {self.id}'
+        return identidade
+
 
