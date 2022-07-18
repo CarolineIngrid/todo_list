@@ -28,3 +28,15 @@ def delete(request, tarefa_id):
     tarefa = Tarefa.objects.get(id=tarefa_id)
     tarefa.delete()
     return redirect('lista')
+
+def riscado(resquest, tarefa_id):
+    tarefa = Tarefa.objects.get(id=tarefa_id)
+    tarefa.status = True
+    tarefa.save()
+    return redirect('lista')
+
+def nao_riscado(resquest, tarefa_id):
+    tarefa = Tarefa.objects.get(id=tarefa_id)
+    tarefa.status = False
+    tarefa.save()
+    return redirect('lista')
