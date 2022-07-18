@@ -21,6 +21,8 @@ body {
     padding-top: 5px;
     margin-top: 15%;
 }
+
+/* ------------- CALENDARIO ---------- */
 .base{
     height: 80vh;
     margin: 0 20px 0 20px
@@ -30,6 +32,10 @@ body {
     margin: 10px;
     display: flex;
     margin-top: 10%;
+}
+
+.data{
+    color: #9e9e9e;
 }
 
 .quadrado{
@@ -50,9 +56,7 @@ body {
     padding-left: 17px;
 }
 
-.data{
-    color: #9e9e9e;
-}
+
 
 .check{
     height: 50px;
@@ -85,6 +89,17 @@ body {
     background-color: #7dff0b;
 }
 
+.delete{
+    color: #000000;
+    text-decoration: none;
+    margin-left: 80%;
+    margin-top: 10%;
+}
+
+form{
+    margin-top: 25%;
+}
+
 li{
     list-style: none;
     
@@ -106,7 +121,7 @@ h1{
 
 /* ------------- BOTÃO -------------- */
 .adicionar_tarefa{
-    margin-top: 35%;
+    margin-top: 20%;
     width: 75px;
     height: 75px;
     background-color: #fbeee0;
@@ -117,7 +132,8 @@ h1{
     color: #422800;
     cursor: pointer;
     text-decoration: none;
-    user-select: none;
+    position: fixed;
+    z-index: 1;
 }
 
 /* -------- vai ser usado pra tela grande ------  */
