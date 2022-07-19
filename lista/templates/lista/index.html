@@ -48,21 +48,21 @@
                       <div>{{tarefa.descricao}}</div>{{tarefa.criacao}}
                     </div>
                 </li>
-                  <a href="{% url 'nao_feita' tarefa.id %}">feito</a>
+                  <!-- <a href="{% url 'nao_feita' tarefa.id %}">feito</a> -->
                   <a class="delete" href="{% url 'lista_delete' tarefa.id %}">
                   <span class="material-symbols-outlined">delete</span></a>
   
-            {% elif tarefa.categoria == "moderada" %}
+          {% elif tarefa.categoria == "moderada" %}
               <li class="importancia-moderada">
               <div class="conteudo">
               <b>{{tarefa.titulo}}</b>
               <div>{{tarefa.descricao}}</div> {{tarefa.criacao}}</div>
               </li>
-              <a href="{% url 'nao_feita' tarefa.id %}">feito</a>
+              <!-- <a href="{% url 'nao_feita' tarefa.id %}">feito</a> -->
               <a class="delete" href= "{% url 'lista_delete' tarefa.id %}">
               <span class="material-symbols-outlined">delete</span></a>
   
-            {% else %}
+          {% else %}
               <li class="importancia-afazer">
                   <div class="conteudo">
                   <b>{{tarefa.titulo}}</b>
@@ -70,13 +70,13 @@
                   {{tarefa.criacao}}
                   </div>
               </li>
-              <a href="{% url 'nao_feita' tarefa.id %}">feito</a>
+              <!-- <a href="{% url 'nao_feita' tarefa.id %}">feito</a> -->
               <a class="delete" href="{% url 'lista_delete' tarefa.id %}">
                 <span class="material-symbols-outlined"> delete</span>
               </a>
           {% endif %}
           </ul>
-        </div>
+          </div>
   
           {% else %}
   
@@ -88,7 +88,7 @@
                       <div>{{tarefa.descricao}}</div>{{tarefa.criacao}}
                   </div>
                   </li>
-                  <a href="{% url 'tarefa_feita' tarefa.id %}">feito</a>
+                  <a class="feito" href="{% url 'tarefa_feita' tarefa.id %}"> teste </a>
                   <a class="delete" href="{% url 'lista_delete' tarefa.id %}">
                     <span class="material-symbols-outlined">delete</span>
                   </a>
@@ -101,7 +101,7 @@
                     {{tarefa.criacao}}
                 </div>
                 </li>
-                <a href="{% url 'tarefa_feita' tarefa.id %}">feito</a>
+                <a class="feito" href="{% url 'tarefa_feita' tarefa.id %}"> teste </a>
                 <a class="delete" href="{% url 'lista_delete' tarefa.id %}"> <span class="material-symbols-outlined">delete</span></a>
   
             {% else %}
@@ -112,14 +112,15 @@
                     {{tarefa.criacao}}
                 </div>
                 </li>
-                <a href="{% url 'tarefa_feita' tarefa.id %}">feito</a>
-                <a class="delete" href="{% url 'lista_delete' tarefa.id %}"
-                ><span class="material-symbols-outlined">delete</span></a
-                >
+                <a class="feito" href="{% url 'tarefa_feita' tarefa.id %}"> teste </a>
+                
+                <a class="delete" href="{% url 'lista_delete' tarefa.id %}">
+                  <span class="material-symbols-outlined">delete</span>
+                </a>
   
             {% endif %}
           </ul>
-          {% endif %} {% endfor %}
+        {% endif %} {% endfor %}
         <!-- ------- botão adicionar tarefa aqui -------- -->
         <form action="{% url 'lista_new' %}">
           <button class="adicionar_tarefa"></button>
