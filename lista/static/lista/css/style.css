@@ -1,14 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Space Grotesk', sans-serif;
     
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
   height: 100vh;
-  background-color: #f48189;
+  background-color: #f5755f;
+  /* box-shadow: inset 0px 0px 60px #2e2c2b; */
+  background: -webkit-linear-gradient(top, #ffe5ca 0%, #32312e33 50%);
 }
 
 .menu{
@@ -33,8 +34,7 @@ body {
 
 .base{
     height: 80vh;
-    
-    background-color: #fdf3e9
+    background-color: #fdf8f3;
 }
 
 .principal{
@@ -43,10 +43,11 @@ body {
 
 /* ------------- CALENDARIO ---------- */
 .calendario{
+    font-family: 'Space Grotesk', sans-serif;
     display: flex;
     margin-top: 5%;
     border-radius: 20px 20px 0px 0px;
-    background-color: #fdf3e9;
+    background-color: #fdf8f3;
     width: 100%;
     height: 100px;
     justify-content: space-evenly;
@@ -57,7 +58,7 @@ body {
     height: 50px;
     border-radius: 15px 15px 15px 15px;
     background-color: #e3e1df;
-    box-shadow: #312f31 4px 10px 0px 0px;
+    box-shadow: #6c6b69 9px 5px 3px 1px;
     margin: 10px;
     text-align: center;
     padding-top: 2%;
@@ -107,8 +108,18 @@ body {
 .delete{
     color: #000000;
     text-decoration: none;
+    margin-left: 3%;
+    margin-top: 10%;
+}
+
+.feito{
+    padding: 3px;
     margin-left: 80%;
     margin-top: 10%;
+}
+
+.tarefa-completa{
+    text-decoration: line-through;
 }
 
 form{
@@ -161,6 +172,8 @@ h1{
   box-shadow: #422800 2px 2px 0 0;
   transform: translate(2px, 2px);
 } */
+
+
 
 
 
