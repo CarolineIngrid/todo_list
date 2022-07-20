@@ -10,6 +10,8 @@ body {
   background-color: #f5755f;
   /* box-shadow: inset 0px 0px 60px #2e2c2b; */
   background: -webkit-linear-gradient(top, #ffe5ca 0%, #32312e33 50%);
+  display: flex;
+  flex-direction: column;
 }
 
 .menu{
@@ -33,12 +35,17 @@ body {
 }
 
 .base{
-    height: 80vh;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     background-color: #fdf8f3;
 }
 
 .principal{
     margin: 0 20px 0 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ------------- CALENDARIO ---------- */
@@ -123,7 +130,9 @@ body {
 }
 
 form{
-    margin-top: 20%;
+    margin-top: auto;
+    position: sticky;
+    bottom: 18px;
 }
 
 li{
@@ -147,7 +156,6 @@ h1{
 
 /* ------------- BOTÃO -------------- */
 .adicionar_tarefa{
-    margin-top: 20%;
     width: 75px;
     height: 75px;
     background-color: #fbeee0;
@@ -158,7 +166,6 @@ h1{
     color: #422800;
     cursor: pointer;
     text-decoration: none;
-    position: fixed;
     z-index: 1;
 }
 
