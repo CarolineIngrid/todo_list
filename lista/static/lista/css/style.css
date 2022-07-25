@@ -47,7 +47,7 @@ body {
 .calendario{
     font-family: 'Space Grotesk', sans-serif;
     display: flex;
-    margin-top: 4%;
+    margin-top: 2%;
     border-radius: 48px 48px 0px 0px;
     background-color: #fdf8f3;
     width: 100%;
