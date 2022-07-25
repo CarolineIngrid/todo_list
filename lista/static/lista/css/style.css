@@ -22,7 +22,7 @@ body {
 
 
 
-.lapis{
+.img-model{
     width: 240px;
     height: 200px;
     margin-top: 5%;
@@ -47,7 +47,7 @@ body {
 .calendario{
     font-family: 'Space Grotesk', sans-serif;
     display: flex;
-    margin-top: 5%;
+    margin-top: 4%;
     border-radius: 48px 48px 0px 0px;
     background-color: #fdf8f3;
     width: 100%;
