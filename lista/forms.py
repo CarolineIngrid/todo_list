@@ -6,7 +6,8 @@ from .models import Tarefa
 class ListaForms(forms.ModelForm):
 
     titulo = forms.CharField(label='Título', widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Ex: Arrumar o quarto."}))
-    descricao = forms.CharField(label='Descrição', widget=forms.Textarea(attrs={"class": "form-control", "placeholder": "Deixe a tarefa mais específica. Ex: Deixar tudo organizado. Principalmente embaixo da cama!"}))
+    descricao = forms.CharField(label='Descrição', widget=forms.Textarea(attrs={"class": "form-control", "placeholder": 
+    "Deixe a tarefa mais específica. Ex: Deixar tudo organizado. Principalmente embaixo da cama!"}))
 
     class Meta:
         model = Tarefa

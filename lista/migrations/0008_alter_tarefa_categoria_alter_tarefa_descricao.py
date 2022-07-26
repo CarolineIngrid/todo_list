@@ -13,7 +13,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='tarefa',
             name='categoria',
-            field=models.CharField(choices=[(None, '---------'), ('urgente', 'Urgente'), ('moderada', 'Moderada'), ('a fazer', 'A fazer')], default='---------', max_length=25),
+            field=models.CharField(choices=[(None, '---------'), ('urgente', 'Urgente'), ('moderada', 'Moderada'), ('a fazer', 'A fazer')], 
+            default='---------', max_length=25),
         ),
         migrations.AlterField(
             model_name='tarefa',
