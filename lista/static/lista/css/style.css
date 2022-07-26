@@ -177,9 +177,20 @@ h1{
 } */
 
 /* ------------- LOGIN ------------- */
+.container{
+    background-color: #fbeee0;
+    width: 400px;
+    margin-top: 40%;
+    margin-left: 20%;
+}
 
-#div_id_username{
-    background-color: #000000;
+form{
+    display: flex;
+    margin-top: auto;
+    position: sticky;
+    bottom: 18px;
+    flex-direction: column;
+    align-items: center;
 }
 
 
