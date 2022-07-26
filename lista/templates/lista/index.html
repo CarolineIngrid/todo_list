@@ -36,7 +36,7 @@
       <div class="principal">
         <h1>Tarefas</h1>
 
-        {% for tarefa in lista_tarefas %} 
+        {% for tarefa in lista_tarefas %}
           {% if tarefa.status %}
             <div class="tarefa-completa">
             <ul class="tarefas">
@@ -46,63 +46,60 @@
                       <b>{{tarefa.titulo}}</b>
                       <div>{{tarefa.descricao}}</div>{{tarefa.criacao}}
                     </div>
-                </li>
-                  <!-- <a href="{% url 'nao_feita' tarefa.id %}">feito</a> -->
-                  <a class="delete" href="{% url 'lista_delete' tarefa.id %}">
+                  </li>
+                    <a class="feito" href="{% url 'nao_feita' tarefa.id %}"><img src="https://img.icons8.com/ios-filled/24/000000/checked-checkbox.png"/> </a>
+                    <a class="delete" href="{% url 'lista_delete' tarefa.id %}">
                   <span class="material-symbols-outlined">delete</span></a>
-  
-          {% elif tarefa.categoria == "moderada" %}
-              <li class="importancia-moderada">
-              <div class="conteudo">
-              <b>{{tarefa.titulo}}</b>
-              <div>{{tarefa.descricao}}</div> {{tarefa.criacao}}</div>
-              </li>
-              <!-- <a href="{% url 'nao_feita' tarefa.id %}">feito</a> -->
-              <a class="delete" href= "{% url 'lista_delete' tarefa.id %}">
-              <span class="material-symbols-outlined">delete</span></a>
-  
-          {% else %}
-              <li class="importancia-afazer">
+
+                {% elif tarefa.categoria == "moderada" %}
+                  <li class="importancia-moderada">
                   <div class="conteudo">
                   <b>{{tarefa.titulo}}</b>
-                  <div>{{tarefa.descricao}}</div>
-                  {{tarefa.criacao}}
-                  </div>
-              </li>
-              <!-- <a href="{% url 'nao_feita' tarefa.id %}">feito</a> -->
-              <a class="delete" href="{% url 'lista_delete' tarefa.id %}">
-                <span class="material-symbols-outlined"> delete</span>
-              </a>
-          {% endif %}
-          </ul>
-          </div>
-  
-          {% else %}
-  
-            <ul class="tarefas">
-                  {% if tarefa.categoria == "urgente" %}
-                  <li class="importancia-urgente">
-                  <div class="conteudo">
-                      <b>{{tarefa.titulo}}</b>
-                      <div>{{tarefa.descricao}}</div>{{tarefa.criacao}}
-                  </div>
+                  <div>{{tarefa.descricao}}</div> {{tarefa.criacao}}</div>
                   </li>
-                  <a class="feito" href="{% url 'tarefa_feita' tarefa.id %}"> teste </a>
+                   <a class="feito" href="{% url 'nao_feita' tarefa.id %}"><img src="https://img.icons8.com/ios-filled/24/000000/checked-checkbox.png"/> </a>
+                  <a class="delete" href= "{% url 'lista_delete' tarefa.id %}">
+                  <span class="material-symbols-outlined">delete</span></a>
+
+                {% else %}
+                  <li class="importancia-afazer">
+                      <div class="conteudo">
+                      <b>{{tarefa.titulo}}</b>
+                      <div>{{tarefa.descricao}}</div>
+                      {{tarefa.criacao}}
+                      </div>
+                  </li>
+                   <a class="feito" href="{% url 'nao_feita' tarefa.id %}"><img src="https://img.icons8.com/ios-filled/24/000000/checked-checkbox.png"/> </a>
                   <a class="delete" href="{% url 'lista_delete' tarefa.id %}">
-                    <span class="material-symbols-outlined">delete</span>
+                    <span class="material-symbols-outlined"> delete</span>
                   </a>
-  
-            {% elif tarefa.categoria == "moderada" %}
+                {% endif %}
+            </ul>
+            </div>
+
+          {% else %}
+            <div class="tarefa-nfeita">
+            <ul class="tarefas">
+                {% if tarefa.categoria == "urgente" %}
+                    <li class="importancia-urgente">
+                        <div class="conteudo">
+                          <b>{{tarefa.titulo}}</b>
+                          <div>{{tarefa.descricao}}</div>{{tarefa.criacao}}
+                        </div>
+                    </li>
+                      <a class="feito" href="{% url 'tarefa_feita' tarefa.id %}"> <img src="https://img.icons8.com/fluency-systems-regular/24/000000/uncheck-all.png"/> </a>
+                      <a class="delete" href="{% url 'lista_delete' tarefa.id %}">
+                          <span class="material-symbols-outlined">delete</span></a>
+
+                {% elif tarefa.categoria == "moderada" %}
                 <li class="importancia-moderada">
                 <div class="conteudo">
                     <b>{{tarefa.titulo}}</b>
-                    <div>{{tarefa.descricao}}</div>
-                    {{tarefa.criacao}}
-                </div>
+                    <div>{{tarefa.descricao}}</div>{{tarefa.criacao}}</div>
                 </li>
-                <a class="feito" href="{% url 'tarefa_feita' tarefa.id %}"> teste </a>
+                <a class="feito" href="{% url 'tarefa_feita' tarefa.id %}"> <img src="https://img.icons8.com/fluency-systems-regular/24/000000/uncheck-all.png"/> </a>
                 <a class="delete" href="{% url 'lista_delete' tarefa.id %}"> <span class="material-symbols-outlined">delete</span></a>
-  
+
             {% else %}
                 <li class="importancia-afazer">
                 <div class="conteudo">
@@ -111,12 +108,10 @@
                     {{tarefa.criacao}}
                 </div>
                 </li>
-                <a class="feito" href="{% url 'tarefa_feita' tarefa.id %}"> teste </a>
-                
+                <a class="feito" href="{% url 'tarefa_feita' tarefa.id %}"> <img src="https://img.icons8.com/fluency-systems-regular/24/000000/uncheck-all.png"/> </a>
                 <a class="delete" href="{% url 'lista_delete' tarefa.id %}">
-                  <span class="material-symbols-outlined">delete</span>
-                </a>
-  
+                  <span class="material-symbols-outlined">delete</span></a>
+
             {% endif %}
           </ul>
         {% endif %} {% endfor %}
@@ -125,8 +120,8 @@
           <button class="adicionar_tarefa"></button>
         </form>
       </div>
-   
-      
+
+
     </div>
   </body>
 </html>
