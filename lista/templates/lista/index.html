@@ -18,18 +18,29 @@
     <title>To Do List</title>
   </head>
   <body>
-    <h3 id="demo" onclick="myFunction()">Click me to change my color.</h3>
-    
 
     {% if user.is_authenticated %}
     
-      <div id="menu" class="menu" onclick="MenuMobile()">
+      <header id="header" class="header">
         <a href=""> <img class="menu-foto" src="{% static "imagens/menu-foto.png" %}"/ alt="foto do menu"> </a>
-      </div>
+        <nav id="nav">
+
+          <h3> Olá {{request.user.username}} </h3>
+          <ul id="menu">
+            <li> <a href="/"> Sobre </a> </li>
+            <li> <a href="/"> Sobre </a> </li>
+            <li> <a href="/"> Sobre </a> </li>
+            <li> <a href="/"> Sobre </a> </li>
+          </ul>
+          
+        </nav>
+      </header>
+
+      
 
       <img class="img-model" src="{% static "/imagens/3d-flame-business-woman-looking-at-completed-checklist-on-clipboard.png" %}"/>
 
-      <!-- <h3> Olá {{request.user.username}} </h3> -->
+     
 
 
       <div class="calendario">
