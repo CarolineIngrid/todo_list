@@ -42,6 +42,17 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* -------------- NAV ----------------- */
+
+#btn-mobile{
+    background-color: #f65f56;
+    border: none;
+}
+
+#menu{
+    display: flex;
+    padding: 5px;
+}
 
 /* ------------- CALENDARIO ---------- */
 .calendario{
@@ -201,8 +212,18 @@ form{
     align-items: center;
 }
 
+/* -------- media querie ----------- */
+@media (max-width: 700px){
+    #menu{
+        display: none;
+    }
 
-
+    #nav.active #menu{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+}
 
 
 

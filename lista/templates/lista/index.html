@@ -14,7 +14,6 @@
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <script src="{% static 'js/script.js' %}"></script>
     <title>To Do List</title>
   </head>
   <body>
@@ -22,12 +21,11 @@
     {% if user.is_authenticated %}
     
       <header id="header" class="header">
-        <a href=""> <img class="menu-foto" src="{% static "imagens/menu-foto.png" %}"/ alt="foto do menu"> </a>
+        <button id="btn-mobile"> <img class="menu-foto" src="{% static "imagens/menu-foto.png" %}"/ alt="foto do menu"></button>
         <nav id="nav">
 
-          <h3> Olá {{request.user.username}} </h3>
           <ul id="menu">
-            <li> <a href="/"> Sobre </a> </li>
+            <li> <h3> Olá {{request.user.username}} </h3> </li>
             <li> <a href="/"> Sobre </a> </li>
             <li> <a href="/"> Sobre </a> </li>
             <li> <a href="/"> Sobre </a> </li>
@@ -151,5 +149,6 @@
         <a href="#"></a>
       </li>
     {% endif %}
+  <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>
