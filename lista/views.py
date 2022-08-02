@@ -1,11 +1,8 @@
 from django.shortcuts import render, reverse, redirect
 from django.views.generic import CreateView
-
 from .forms import ListaForms
 from .models import Tarefa
-
 from urllib import request
-
 
 # Create your views here.
 def lista_tarefas(request):
@@ -40,3 +37,6 @@ def nao_riscado(request, tarefa_id):
     tarefa.status = False
     tarefa.save()
     return redirect('lista')
+
+def login(request):
+    return redirect('login')
